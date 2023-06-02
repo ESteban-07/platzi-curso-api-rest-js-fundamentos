@@ -13,15 +13,33 @@
     <title>Cat App</title>
   </head>
   <body>
-    <h1>Random Cats</h1>
+    <h1 class="title">Random Cats</h1>
+    <form id="cats-form">
+      <label for="cats-qty">How many cats do you want?</label>
+      <input
+        type="number"
+        min="1"
+        max="10"
+        placeholder="1"
+        id="cats-qty"
+        name="cats-qty"
+        required />
+      <button type="submit" class="btn">CLICK</button>
+    </form>
     <div class="container">
       <template id="image-template">
-        <div>
+        <div class="card">
           <img class="cat-img skeleton" alt="" />
+          <button class="favourites-btn">Add to favourites</button>
         </div>
       </template>
     </div>
-    <button class="btn">GET RANDOM CAT</button>
+    <section class="favourites-section">
+      <h2 class="title">My Favourite Cats</h2>
+      <div class="container">
+        <p>Ups! The list seems to be empty...</p>
+      </div>
+    </section>
     <script src="main.js"></script>
   </body>
 </html>

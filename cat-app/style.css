@@ -28,15 +28,23 @@ body {
 .container img[alt] {
   text-indent: -10000px;
 }
-.container div {
+.container .card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 5px;
+  border: 2px dotted #c2c2c2;
   width: fit-content;
   height: 100%;
 }
-.container div .cat-img {
+.container .card .cat-img {
   width: 300px;
   height: 300px;
   object-fit: cover;
   border-radius: 8px;
+}
+.container .card .favourites-btn {
+  cursor: pointer;
 }
 
 .btn {
@@ -67,6 +75,9 @@ body {
   100% {
     background-color: hsl(200, 20%, 95%);
   }
+}
+.favourites-section {
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */

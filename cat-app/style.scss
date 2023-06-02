@@ -32,7 +32,12 @@ body {
     text-indent: -10000px;
   }
 
-  div {
+  .card {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 5px;
+    border: 2px dotted #c2c2c2;
     width: fit-content;
     height: 100%;
 
@@ -41,6 +46,10 @@ body {
       height: $x;
       object-fit: cover;
       border-radius: 8px;
+    }
+
+    .favourites-btn {
+      cursor: pointer;
     }
   }
 }
@@ -74,4 +83,8 @@ body {
   100% {
     background-color: hsl(200, 20%, 95%);
   }
+}
+
+.favourites-section {
+  text-align: center;
 }
