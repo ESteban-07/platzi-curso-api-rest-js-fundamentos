@@ -4,16 +4,23 @@ $x: 300px;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  // outline: 2px dotted red;
 }
 
 body {
-  display: grid;
-  place-content: center;
-  justify-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   min-height: 100vh;
   font-family: 'Roboto', sans-serif;
   padding: 20px 0;
+}
+
+section {
+  width: 100%;
+  text-align: center;
 }
 
 .container {
@@ -25,7 +32,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   place-items: center;
-  gap: 12px;
+  row-gap: 12px;
 
   //Hides the broken image icon
   img[alt] {
@@ -48,7 +55,7 @@ body {
       border-radius: 8px;
     }
 
-    .favourites-btn {
+    button {
       cursor: pointer;
     }
   }
@@ -57,6 +64,7 @@ body {
 .btn {
   width: fit-content;
   cursor: pointer;
+  text-align: center;
   color: #fff;
   background-color: #007bff;
   padding: 6px 12px;
@@ -70,6 +78,28 @@ body {
     background-color: #0069d9;
     border-color: #0062cc;
   }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  gap: 4px;
+  margin-top: 8px;
+
+  input#cats-qty {
+    width: 100%;
+    border: 2px solid #c4bca6;
+    padding: 4px;
+    font-size: 1rem;
+    margin: 8px;
+    border-radius: 20px;
+    text-align: center;
+  }
+}
+
+#reload-btn {
+  margin-bottom: 40px;
 }
 
 .skeleton {

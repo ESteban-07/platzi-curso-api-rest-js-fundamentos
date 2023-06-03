@@ -20,23 +20,26 @@
         type="number"
         min="1"
         max="10"
-        placeholder="1"
+        placeholder="Write a number"
         id="cats-qty"
         name="cats-qty"
         required />
-      <button type="submit" class="btn">CLICK</button>
+      <button type="submit" class="btn">Confirm</button>
     </form>
-    <div class="container">
-      <template id="image-template">
-        <div class="card">
-          <img class="cat-img skeleton" alt="" />
-          <button class="favourites-btn">Add to favourites</button>
-        </div>
-      </template>
-    </div>
-    <section class="favourites-section">
+    <section class="random-section">
+      <div id="random-cats-container" class="container">
+        <template id="image-template">
+          <div class="card">
+            <img class="cat-img skeleton" alt="" />
+            <button class="favourites-btn">Add to favourites</button>
+          </div>
+        </template>
+      </div>
+      <button id="reload-btn" class="btn">Get new images</button>
+    </section>
+    <section class="favourite-section">
       <h2 class="title">My Favourite Cats</h2>
-      <div class="container">
+      <div id="favourite-cats-container" class="container">
         <p>Ups! The list seems to be empty...</p>
       </div>
     </section>
